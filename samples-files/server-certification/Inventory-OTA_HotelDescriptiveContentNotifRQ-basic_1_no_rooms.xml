@@ -1,0 +1,330 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OTA_HotelDescriptiveContentNotifRQ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+                                    xmlns="http://www.opentravel.org/OTA/2003/05" 
+                                    xsi:schemaLocation="http://www.opentravel.org/OTA/2003/05 OTA_HotelDescriptiveContentNotifRQ.xsd" 
+                                    Version="8.000">
+  <HotelDescriptiveContents>
+    <HotelDescriptiveContent HotelCode="{HOTELCODE}"   >
+      <FacilityInfo>
+        <GuestRooms>
+          <!-- START SINGLE 1 -->
+           <GuestRoom Code="EZ_1" MaxOccupancy="1" MinOccupancy="1" MaxChildOccupancy="0">
+            <TypeRoom StandardOccupancy="1" RoomClassificationCode="42"/>
+            <Amenities>
+              <Amenity RoomAmenityCode="26"/>
+            </Amenities>
+            <MultimediaDescriptions>
+              <MultimediaDescription InfoCode="25">
+                <TextItems>
+                  <TextItem>
+                    <Description TextFormat="PlainText" Language="en">Single room 1</Description>
+                    <Description TextFormat="PlainText" Language="de">Einzelzimmer 1</Description>
+                    <Description TextFormat="PlainText" Language="it">Camera singola 1</Description>
+                  </TextItem>
+                </TextItems>
+              </MultimediaDescription>
+              <MultimediaDescription InfoCode="1">
+                <TextItems>
+                  <TextItem>
+                    <Description TextFormat="PlainText" Language="en">Description of the single room 1.</Description>
+                    <Description TextFormat="PlainText" Language="de">Einzelzimmer Beschreibung 1.</Description>
+                    <Description TextFormat="PlainText" Language="it">Descrizione della camera singola 1.</Description>
+                  </TextItem>
+                </TextItems>
+              </MultimediaDescription>
+              <MultimediaDescription InfoCode="23">
+                <ImageItems>
+                  <ImageItem Category="6">
+                    <ImageFormat CopyrightNotice="Copyright notice 2015">
+                      <URL>http://www.example.com/image.jpg</URL>
+                    </ImageFormat>
+                    <Description TextFormat="PlainText" Language="en">Picture of the ez 1 room</Description>
+                    <Description TextFormat="PlainText" Language="de">Zimmerbild EZ 1</Description>
+                    <Description TextFormat="PlainText" Language="it">Immagine della stanza EZ 1</Description>
+                  </ImageItem>
+                </ImageItems>
+              </MultimediaDescription>
+              <MultimediaDescription>
+                <ImageItems>
+                  <ImageItem Category="17">
+                    <ImageFormat CopyrightNotice="Copyright notice 2015">
+                      <URL>http://www.example.com/map.jpg</URL>
+                    </ImageFormat>
+                    <Description TextFormat="PlainText" Language="en">Map of the room EZ 1</Description>
+                    <Description TextFormat="PlainText" Language="de">Zimmerplan EZ 1</Description>
+                    <Description TextFormat="PlainText" Language="it">Mappa della stanza EZ 1</Description>
+                  </ImageItem>
+                </ImageItems>
+              </MultimediaDescription>
+            </MultimediaDescriptions>
+          </GuestRoom>
+          <!-- END SINGLE 1 -->
+          <!-- START SINGLE 2 -->
+           <GuestRoom Code="EZ_2" MaxOccupancy="2" MinOccupancy="1" MaxChildOccupancy="0">
+            <TypeRoom StandardOccupancy="1" RoomClassificationCode="42"/>
+            <Amenities>
+              <Amenity RoomAmenityCode="26"/>
+            </Amenities>
+            <MultimediaDescriptions>
+              <MultimediaDescription InfoCode="25">
+                <TextItems>
+                  <TextItem>
+                    <Description TextFormat="PlainText" Language="en">Single room 2</Description>
+                    <Description TextFormat="PlainText" Language="de">Einzelzimmer 2</Description>
+                    <Description TextFormat="PlainText" Language="it">Camera singola 2</Description>
+                  </TextItem>
+                </TextItems>
+              </MultimediaDescription>
+              <MultimediaDescription InfoCode="1">
+                <TextItems>
+                  <TextItem>
+                    <Description TextFormat="PlainText" Language="en">Description of the single room 2.</Description>
+                    <Description TextFormat="PlainText" Language="de">Einzelzimmer Beschreibung 2.</Description>
+                    <Description TextFormat="PlainText" Language="it">Descrizione della camera singola 2.</Description>
+                  </TextItem>
+                </TextItems>
+              </MultimediaDescription>
+              <MultimediaDescription InfoCode="23">
+                <ImageItems>
+                  <ImageItem Category="6">
+                    <ImageFormat CopyrightNotice="Copyright notice 2015">
+                      <URL>http://www.example.com/image.jpg</URL>
+                    </ImageFormat>
+                    <Description TextFormat="PlainText" Language="en">Picture of the room</Description>
+                    <Description TextFormat="PlainText" Language="de">Zimmerbild</Description>
+                    <Description TextFormat="PlainText" Language="it">Immagine della stanza</Description>
+                  </ImageItem>
+                </ImageItems>
+              </MultimediaDescription>
+              <MultimediaDescription>
+                <ImageItems>
+                  <ImageItem Category="17">
+                    <ImageFormat CopyrightNotice="Copyright notice 2015">
+                      <URL>http://www.example.com/map.jpg</URL>
+                    </ImageFormat>
+                    <Description TextFormat="PlainText" Language="en">Map of the room</Description>
+                    <Description TextFormat="PlainText" Language="de">Zimmerplan</Description>
+                    <Description TextFormat="PlainText" Language="it">Mappa della stanza</Description>
+                  </ImageItem>
+                </ImageItems>
+              </MultimediaDescription>
+            </MultimediaDescriptions>
+          </GuestRoom>
+          <!-- END SINGLE 2 -->
+          <!-- START DOUBLE 1 -->
+          <GuestRoom Code="DZ_1" MaxOccupancy="2" MinOccupancy="1" MaxChildOccupancy="0">
+            <TypeRoom StandardOccupancy="2" RoomClassificationCode="42"/>
+            <Amenities>
+              <Amenity RoomAmenityCode="26"/>
+            </Amenities>
+            <MultimediaDescriptions>
+              <MultimediaDescription InfoCode="25">
+                <TextItems>
+                  <TextItem>
+                    <Description TextFormat="PlainText" Language="en">Double room DZ_1</Description>
+                    <Description TextFormat="PlainText" Language="de">Doppelzimmer DZ_1</Description>
+                    <Description TextFormat="PlainText" Language="it">Camera doppia DZ_1</Description>
+                  </TextItem>
+                </TextItems>
+              </MultimediaDescription>
+              <MultimediaDescription InfoCode="1">
+                <TextItems>
+                  <TextItem>
+                    <Description TextFormat="PlainText" Language="en">Description of the double room DZ_1.</Description>
+                    <Description TextFormat="PlainText" Language="de">Doppelzimmer Beschreibung DZ_1.</Description>
+                    <Description TextFormat="PlainText" Language="it">Descrizione della camera doppia DZ_1.</Description>
+                  </TextItem>
+                </TextItems>
+              </MultimediaDescription>
+              <MultimediaDescription InfoCode="23">
+                <ImageItems>
+                  <!-- 6 means Guest room, see OTA table PIC -->
+                  <ImageItem Category="6">
+                    <ImageFormat CopyrightNotice="Copyright notice 2015">
+                      <URL>http://www.example.com/image.jpg</URL>
+                    </ImageFormat>
+                    <Description TextFormat="PlainText" Language="en">Picture of the room DZ_1</Description>
+                    <Description TextFormat="PlainText" Language="de">Zimmerbild DZ_1</Description>
+                    <Description TextFormat="PlainText" Language="it">Immagine della stanza DZ_1</Description>
+                  </ImageItem>
+                </ImageItems>
+              </MultimediaDescription>
+              <MultimediaDescription>
+                <ImageItems>
+                  <ImageItem Category="17">
+                    <ImageFormat CopyrightNotice="Copyright notice 2015">
+                      <URL>http://www.example.com/map.jpg</URL>
+                    </ImageFormat>
+                    <Description TextFormat="PlainText" Language="en">Map of the room DZ_1</Description>
+                    <Description TextFormat="PlainText" Language="de">Zimmerplan DZ_1</Description>
+                    <Description TextFormat="PlainText" Language="it">Mappa della stanza DZ_1</Description>
+                  </ImageItem>
+                </ImageItems>
+              </MultimediaDescription>
+            </MultimediaDescriptions>
+          </GuestRoom>
+          <!-- END DZ_1 ROOM -->
+          <!-- START DOUBLE 2 -->
+          <GuestRoom Code="DZ_2" MaxOccupancy="4" MinOccupancy="1" MaxChildOccupancy="2">
+            <TypeRoom StandardOccupancy="2" RoomClassificationCode="42"/>
+            <Amenities>
+              <Amenity RoomAmenityCode="26"/>
+            </Amenities>
+            <MultimediaDescriptions>
+              <MultimediaDescription InfoCode="25">
+                <TextItems>
+                  <TextItem>
+                    <Description TextFormat="PlainText" Language="en">Double room DZ_2</Description>
+                    <Description TextFormat="PlainText" Language="de">Doppelzimmer DZ_2 )(/&amp;%$§"!äöüßßß??</Description>
+                    <Description TextFormat="PlainText" Language="it">Camera doppia DZ_2</Description>
+                  </TextItem>
+                </TextItems>
+              </MultimediaDescription>
+              <MultimediaDescription InfoCode="1">
+                <TextItems>
+                  <TextItem>
+                    <Description TextFormat="PlainText" Language="en">Description of the double room DZ_2.</Description>
+                    <Description TextFormat="PlainText" Language="de">Doppelzimmer Beschreibung DZ_2. )(/&amp;%$§"!äöüßßß??</Description>
+                    <Description TextFormat="PlainText" Language="it">Descrizione della camera doppia DZ_2.</Description>
+                  </TextItem>
+                </TextItems>
+              </MultimediaDescription>
+              <MultimediaDescription InfoCode="23">
+                <ImageItems>
+                  <!-- 6 means Guest room, see OTA table PIC -->
+                  <ImageItem Category="6">
+                    <ImageFormat CopyrightNotice="Copyright notice 2015">
+                      <URL>http://www.example.com/image.jpg</URL>
+                    </ImageFormat>
+                    <Description TextFormat="PlainText" Language="en">Picture of the room DZ_2</Description>
+                    <Description TextFormat="PlainText" Language="de">Zimmerbild DZ_2 )(/&amp;%$§"!äöüßßß??</Description>
+                    <Description TextFormat="PlainText" Language="it">Immagine della stanza DZ_2</Description>
+                  </ImageItem>
+                </ImageItems>
+              </MultimediaDescription>
+              <MultimediaDescription>
+                <ImageItems>
+                  <ImageItem Category="17">
+                    <ImageFormat CopyrightNotice="Copyright notice 2015">
+                      <URL>http://www.example.com/map.jpg</URL>
+                    </ImageFormat>
+                    <Description TextFormat="PlainText" Language="en">Map of the room DZ_2</Description>
+                    <Description TextFormat="PlainText" Language="de">Zimmerplan DZ_2</Description>
+                    <Description TextFormat="PlainText" Language="it">Mappa della stanza DZ_2</Description>
+                  </ImageItem>
+                </ImageItems>
+              </MultimediaDescription>
+            </MultimediaDescriptions>
+          </GuestRoom>
+          <!-- END DZ_2 ROOM -->
+          <!-- START SUITE -->
+          <GuestRoom Code="SUITE" MaxOccupancy="4" MinOccupancy="2" MaxChildOccupancy="2">
+            <TypeRoom StandardOccupancy="2" RoomClassificationCode="42"/>
+            <Amenities>
+              <Amenity RoomAmenityCode="26"/>
+            </Amenities>
+            <MultimediaDescriptions>
+              <MultimediaDescription InfoCode="25">
+                <TextItems>
+                  <TextItem>
+                    <Description TextFormat="PlainText" Language="en">Double room SUITE</Description>
+                    <Description TextFormat="PlainText" Language="de">Doppelzimmer SUITE</Description>
+                    <Description TextFormat="PlainText" Language="it">Camera doppia SUITE</Description>
+                  </TextItem>
+                </TextItems>
+              </MultimediaDescription>
+              <MultimediaDescription InfoCode="1">
+                <TextItems>
+                  <TextItem>
+                    <Description TextFormat="PlainText" Language="en">Description of the double room SUITE.</Description>
+                    <Description TextFormat="PlainText" Language="de">Doppelzimmer Beschreibung SUITE.</Description>
+                    <Description TextFormat="PlainText" Language="it">Descrizione della camera doppia SUITE.</Description>
+                  </TextItem>
+                </TextItems>
+              </MultimediaDescription>
+              <MultimediaDescription InfoCode="23">
+                <ImageItems>
+                  <!-- 6 means Guest room, see OTA table PIC -->
+                  <ImageItem Category="6">
+                    <ImageFormat CopyrightNotice="Copyright notice 2015">
+                      <URL>http://www.example.com/image.jpg</URL>
+                    </ImageFormat>
+                    <Description TextFormat="PlainText" Language="en">Picture of the room SUITE</Description>
+                    <Description TextFormat="PlainText" Language="de">Zimmerbild SUITE</Description>
+                    <Description TextFormat="PlainText" Language="it">Immagine della stanza SUITE</Description>
+                  </ImageItem>
+                </ImageItems>
+              </MultimediaDescription>
+              <MultimediaDescription>
+                <ImageItems>
+                  <ImageItem Category="17">
+                    <ImageFormat CopyrightNotice="Copyright notice 2015">
+                      <URL>http://www.example.com/map.jpg</URL>
+                    </ImageFormat>
+                    <Description TextFormat="PlainText" Language="en">Map of the room SUITE</Description>
+                    <Description TextFormat="PlainText" Language="de">Zimmerplan SUITE</Description>
+                    <Description TextFormat="PlainText" Language="it">Mappa della stanza SUITE</Description>
+                  </ImageItem>
+                </ImageItems>
+              </MultimediaDescription>
+            </MultimediaDescriptions>
+          </GuestRoom>
+          <!-- END SUITE ROOM -->
+          <!-- START APP -->
+          <GuestRoom Code="APP_1" MaxOccupancy="8" MinOccupancy="4" MaxChildOccupancy="2">
+            <TypeRoom StandardOccupancy="5" RoomClassificationCode="42"/>
+            <Amenities>
+              <Amenity RoomAmenityCode="26"/>
+            </Amenities>
+            <MultimediaDescriptions>
+              <MultimediaDescription InfoCode="25">
+                <TextItems>
+                  <TextItem>
+                    <Description TextFormat="PlainText" Language="en">App EN APP_1</Description>
+                    <Description TextFormat="PlainText" Language="de">App DE APP_1</Description>
+                    <Description TextFormat="PlainText" Language="it">APP IT APP_1</Description>
+                  </TextItem>
+                </TextItems>
+              </MultimediaDescription>
+              <MultimediaDescription InfoCode="1">
+                <TextItems>
+                  <TextItem>
+                    <Description TextFormat="PlainText" Language="en">Description of the App APP_1.</Description>
+                    <Description TextFormat="PlainText" Language="de">Doppelzimmer Beschreibung App APP_1.</Description>
+                    <Description TextFormat="PlainText" Language="it">Descrizione della camera doppia App APP_1.</Description>
+                  </TextItem>
+                </TextItems>
+              </MultimediaDescription>
+              <MultimediaDescription InfoCode="23">
+                <ImageItems>
+                  <!-- 6 means Guest room, see OTA table PIC -->
+                  <ImageItem Category="6">
+                    <ImageFormat CopyrightNotice="Copyright notice 2015">
+                      <URL>http://www.example.com/image.jpg</URL>
+                    </ImageFormat>
+                    <Description TextFormat="PlainText" Language="en">Picture of the room App APP_1</Description>
+                    <Description TextFormat="PlainText" Language="de">Zimmerbild App APP_1</Description>
+                    <Description TextFormat="PlainText" Language="it">Immagine della stanza App APP_1</Description>
+                  </ImageItem>
+                </ImageItems>
+              </MultimediaDescription>
+              <MultimediaDescription>
+                <ImageItems>
+                  <ImageItem Category="17">
+                    <ImageFormat CopyrightNotice="Copyright notice 2015">
+                      <URL>http://www.example.com/map.jpg</URL>
+                    </ImageFormat>
+                    <Description TextFormat="PlainText" Language="en">Map of the room App APP_1</Description>
+                    <Description TextFormat="PlainText" Language="de">Zimmerplan App APP_1</Description>
+                    <Description TextFormat="PlainText" Language="it">Mappa della stanza App APP_1</Description>
+                  </ImageItem>
+                </ImageItems>
+              </MultimediaDescription>
+            </MultimediaDescriptions>
+          </GuestRoom>
+          <!-- END SUITE ROOM -->
+          </GuestRooms>
+      </FacilityInfo>
+    </HotelDescriptiveContent>
+  </HotelDescriptiveContents>
+</OTA_HotelDescriptiveContentNotifRQ>

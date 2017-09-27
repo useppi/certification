@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Example for a quote/booking read request WITHOUT indicating start date in a OTA_ReadRQ message.
+-->
+<OTA_ReadRQ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            xmlns="http://www.opentravel.org/OTA/2003/05"
+            xsi:schemaLocation="http://www.opentravel.org/OTA/2003/05 OTA_ReadRQ.xsd"
+            Version="1.001">
+    <ReadRequests>
+        <HotelReadRequest HotelCode="{HOTELCODE}"   >
+       </HotelReadRequest>
+    </ReadRequests>
+</OTA_ReadRQ>

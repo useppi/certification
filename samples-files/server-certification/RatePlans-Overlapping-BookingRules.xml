@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Example request for a New message of OTA_HotelRatePlanNotifRQ, with a invalid date range (Overlapping) of BookingRules
+The server must return an error
+-->
+<OTA_HotelRatePlanNotifRQ xmlns="http://www.opentravel.org/OTA/2003/05" Version="6.000" TimeStamp="{YEAR}-10-22T19:20:47" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.opentravel.org/OTA/2003/05 OTA_HotelRatePlanNotifRQ.xsd">
+  <RatePlans HotelCode="{HOTELCODE}">
+    <RatePlan CurrencyCode="EUR" RatePlanCode="TP-HP" RatePlanNotifType="New">
+      <BookingRules>
+        <BookingRule Code="DZ_2" CodeContext="ROOMTYPE" Start="{YEAR}-12-01" End="{YEAR}-12-21">
+          <LengthsOfStay>
+            <LengthOfStay Time="3" TimeUnit="Day" MinMaxMessageType="SetMinLOS"/>
+          </LengthsOfStay>
+        </BookingRule>
+        <BookingRule Code="DZ_2" CodeContext="ROOMTYPE" Start="{YEAR}-12-21" End="{YEAR}-12-31">
+          <LengthsOfStay>
+            <LengthOfStay Time="3" TimeUnit="Day" MinMaxMessageType="SetMinLOS"/>
+          </LengthsOfStay>
+        </BookingRule>
+      </BookingRules>
+      <Rates>
+        <Rate InvTypeCode="DZ_2" Start="{YEAR}-10-22" End="{YEAR}-11-30">
+          <BaseByGuestAmts>
+            <BaseByGuestAmt NumberOfGuests="1" AgeQualifyingCode="10" AmountAfterTax="152.4" Type="7"/>
+            <BaseByGuestAmt NumberOfGuests="2" AgeQualifyingCode="10" AmountAfterTax="127" Type="7"/>
+          </BaseByGuestAmts>
+          <AdditionalGuestAmounts>
+            <AdditionalGuestAmount AgeQualifyingCode="10" Amount="101.6"/>
+            <AdditionalGuestAmount AgeQualifyingCode="8" MaxAge="3" Amount="30"/>
+            <AdditionalGuestAmount AgeQualifyingCode="8" MinAge="3" MaxAge="7" Amount="38.1"/>
+            <AdditionalGuestAmount AgeQualifyingCode="8" MinAge="7" MaxAge="14" Amount="63.5"/>
+          </AdditionalGuestAmounts>
+          <MealsIncluded MealPlanCodes="12" MealPlanIndicator="1"/>
+        </Rate>
+        <Rate InvTypeCode="DZ_2" Start="{YEAR}-12-01" End="{YEAR}-12-21">
+          <BaseByGuestAmts>
+            <BaseByGuestAmt NumberOfGuests="1" AgeQualifyingCode="10" AmountAfterTax="152.4" Type="7"/>
+            <BaseByGuestAmt NumberOfGuests="2" AgeQualifyingCode="10" AmountAfterTax="127" Type="7"/>
+          </BaseByGuestAmts>
+          <AdditionalGuestAmounts>
+            <AdditionalGuestAmount AgeQualifyingCode="10" Amount="101.6"/>
+            <AdditionalGuestAmount AgeQualifyingCode="8" MaxAge="3" Amount="30"/>
+            <AdditionalGuestAmount AgeQualifyingCode="8" MinAge="3" MaxAge="7" Amount="38.1"/>
+            <AdditionalGuestAmount AgeQualifyingCode="8" MinAge="7" MaxAge="14" Amount="63.5"/>
+          </AdditionalGuestAmounts>
+          <MealsIncluded MealPlanCodes="12" MealPlanIndicator="1"/>
+        </Rate>
+        <Rate InvTypeCode="DZ_2" Start="{YEAR}-12-22" End="{YEAR}-12-31">
+          <BaseByGuestAmts>
+            <BaseByGuestAmt NumberOfGuests="1" AgeQualifyingCode="10" AmountAfterTax="224.4" Type="7"/>
+            <BaseByGuestAmt NumberOfGuests="2" AgeQualifyingCode="10" AmountAfterTax="187" Type="7"/>
+          </BaseByGuestAmts>
+          <AdditionalGuestAmounts>
+            <AdditionalGuestAmount AgeQualifyingCode="10" Amount="149.6"/>
+            <AdditionalGuestAmount AgeQualifyingCode="8" MaxAge="3" Amount="30"/>
+            <AdditionalGuestAmount AgeQualifyingCode="8" MinAge="3" MaxAge="7" Amount="56.1"/>
+            <AdditionalGuestAmount AgeQualifyingCode="8" MinAge="7" MaxAge="14" Amount="93.5"/>
+          </AdditionalGuestAmounts>
+          <MealsIncluded MealPlanCodes="12" MealPlanIndicator="1"/>
+        </Rate>
+      </Rates>
+      <Description Name="title">
+        <Text TextFormat="PlainText" Language="de">Tagespreis HP</Text>
+        <Text TextFormat="PlainText" Language="it">Prezzo giornaliero MP</Text>
+        <Text TextFormat="PlainText" Language="en">Daily price for half board</Text>
+      </Description>
+      <Description Name="intro">
+        <Text TextFormat="PlainText" Language="de">Dies ist der Tagespreis inkl. Halbpension aber ohne Mittagessen.</Text>
+        <Text TextFormat="PlainText" Language="it">Questo è il prezzo giornaliero.</Text>
+        <Text TextFormat="PlainText" Language="en">This is your daily price for half board.</Text>
+      </Description>
+    </RatePlan>
+  </RatePlans>
+</OTA_HotelRatePlanNotifRQ>

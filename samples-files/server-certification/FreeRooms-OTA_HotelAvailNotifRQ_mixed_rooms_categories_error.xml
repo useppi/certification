@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Example for a mandatory error generation for mixing room data and category data in one 
+OTA_HotelAvailNotifRQ message.
+-->
+<OTA_HotelAvailNotifRQ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+                       xmlns="http://www.opentravel.org/OTA/2003/05"
+                       xsi:schemaLocation="http://www.opentravel.org/OTA/2003/05 OTA_HotelAvailNotifRQ.xsd"
+                       Version="1.002">
+
+    <UniqueID Type="16" ID="1" Instance="CompleteSet"/>
+    <AvailStatusMessages HotelCode="{HOTELCODE}">
+        <!-- ROOM DATA-->
+        <AvailStatusMessage BookingLimit="1" BookingLimitMessageType="SetLimit">
+            <StatusApplicationControl Start="{YEAR}-08-01" End="{YEAR}-08-10" InvTypeCode="DZ_1" InvCode="103" />
+        </AvailStatusMessage>
+        <AvailStatusMessage BookingLimit="1" BookingLimitMessageType="SetLimit">
+            <StatusApplicationControl Start="{YEAR}-08-11" End="{YEAR}-08-11" InvTypeCode="DZ_1" InvCode="103" />
+        </AvailStatusMessage>
+        <AvailStatusMessage BookingLimit="1" BookingLimitMessageType="SetLimit">
+            <StatusApplicationControl Start="{YEAR}-08-21" End="{YEAR}-08-30" InvTypeCode="DZ_1" InvCode="103" />
+        </AvailStatusMessage>
+        <!-- CATEGORY DATA-->
+        <AvailStatusMessage BookingLimit="2" BookingLimitMessageType="SetLimit">
+            <StatusApplicationControl Start="{YEAR}-08-21" End="{YEAR}-08-30" InvTypeCode="DZ_2"  />
+        </AvailStatusMessage>
+    </AvailStatusMessages>
+
+</OTA_HotelAvailNotifRQ>

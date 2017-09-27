@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Example request for a Remove message of OTA_HotelRatePlanNotifRQ with unknown RatePlanCode
+-->
+<OTA_HotelRatePlanNotifRQ xmlns="http://www.opentravel.org/OTA/2003/05" Version="6.000" TimeStamp="{YEAR}-10-16T17:00:40" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.opentravel.org/OTA/2003/05 OTA_HotelRatePlanNotifRQ.xsd">
+  <RatePlans HotelCode="{HOTELCODE}">
+    <RatePlan RatePlanCode="unknownRPC" RatePlanNotifType="Remove">
+    </RatePlan>
+  </RatePlans>
+</OTA_HotelRatePlanNotifRQ>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Example for a "reset availability" message of  OTA_HotelAvailNotifRQ message.
+-->
+<OTA_HotelAvailNotifRQ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                       xmlns="http://www.opentravel.org/OTA/2003/05" 
+                       Version="3.000" 
+                       xsi:schemaLocation="http://www.opentravel.org/OTA/2003/05 OTA_HotelAvailNotifRQ.xsd">
+  <UniqueID Type="16" ID="1" Instance="CompleteSet"/>
+  <AvailStatusMessages HotelCode="{HOTELCODE}">
+    <AvailStatusMessage/>
+  </AvailStatusMessages>
+</OTA_HotelAvailNotifRQ>

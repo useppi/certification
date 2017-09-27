@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Example for CompleteSet message for OTA_HotelAvailNotifRQ message.
+-->
+<OTA_HotelAvailNotifRQ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+                       xmlns="http://www.opentravel.org/OTA/2003/05"
+                       xsi:schemaLocation="http://www.opentravel.org/OTA/2003/05 OTA_HotelAvailNotifRQ.xsd"
+                       Version="1.002">
+    <UniqueID Type="16" ID="1" Instance="CompleteSet"/> 
+    <AvailStatusMessages HotelCode="{HOTELCODE}"  >
+
+        <!-- EZ_1 -->
+        <AvailStatusMessage BookingLimit="4" BookingLimitMessageType="SetLimit">
+            <StatusApplicationControl Start="{YEAR}-08-01" End="{YEAR}-08-10" InvTypeCode="EZ_1"   />
+        </AvailStatusMessage>
+        <AvailStatusMessage BookingLimit="3" BookingLimitMessageType="SetLimit">
+            <StatusApplicationControl Start="{YEAR}-08-21" End="{YEAR}-08-30" InvTypeCode="EZ_1"   />
+        </AvailStatusMessage>
+
+        <!-- DZ_1  -->
+        <AvailStatusMessage BookingLimit="1" BookingLimitMessageType="SetLimit">
+            <StatusApplicationControl Start="{YEAR}-08-01" End="{YEAR}-08-10" InvTypeCode="DZ_1"  />
+        </AvailStatusMessage>
+        <AvailStatusMessage BookingLimit="0" BookingLimitMessageType="SetLimit">
+            <StatusApplicationControl Start="{YEAR}-08-11" End="{YEAR}-08-11" InvTypeCode="DZ_1"  />
+        </AvailStatusMessage>
+        <AvailStatusMessage BookingLimit="3" BookingLimitMessageType="SetLimit">
+            <StatusApplicationControl Start="{YEAR}-08-21" End="{YEAR}-08-30" InvTypeCode="DZ_1"  />
+        </AvailStatusMessage>
+
+        <!-- DZ_2  -->
+        <AvailStatusMessage BookingLimit="0" BookingLimitMessageType="SetLimit">
+            <StatusApplicationControl Start="{YEAR}-08-01" End="{YEAR}-08-10" InvTypeCode="DZ_2"  />
+        </AvailStatusMessage>
+        <AvailStatusMessage BookingLimit="2" BookingLimitMessageType="SetLimit">
+            <StatusApplicationControl Start="{YEAR}-08-11" End="{YEAR}-08-20" InvTypeCode="DZ_2"  />
+        </AvailStatusMessage>
+        <AvailStatusMessage BookingLimit="1" BookingLimitMessageType="SetLimit">
+            <StatusApplicationControl Start="{YEAR}-08-21" End="{YEAR}-08-30" InvTypeCode="DZ_2"  />
+        </AvailStatusMessage>
+
+    </AvailStatusMessages>
+
+</OTA_HotelAvailNotifRQ>

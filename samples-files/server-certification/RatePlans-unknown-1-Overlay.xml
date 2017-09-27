@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Example request for a Overlay message of OTA_HotelRatePlanNotifRQ with unknown InventoryCode
+-->
+<OTA_HotelRatePlanNotifRQ xmlns="http://www.opentravel.org/OTA/2003/05" Version="6.000" TimeStamp="{YEAR}-10-16T17:07:02" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.opentravel.org/OTA/2003/05 OTA_HotelRatePlanNotifRQ.xsd">
+  <RatePlans HotelCode="{HOTELCODE}">
+    <RatePlan CurrencyCode="EUR" RatePlanCode="TP-APP" RatePlanNotifType="Overlay">
+      <BookingRules>
+        <BookingRule Code="APP_UK" CodeContext="ROOMTYPE" Start="{YEAR}-10-16" End="{YEAR}-12-21">
+          <LengthsOfStay>
+            <LengthOfStay Time="3" TimeUnit="Day" MinMaxMessageType="SetMinLOS"/>
+          </LengthsOfStay>
+          <DOW_Restrictions>
+            <ArrivalDaysOfWeek Mon="1" Tue="1" Weds="1" Thur="1" Fri="1" Sat="1" Sun="1"/>
+          </DOW_Restrictions>
+        </BookingRule>
+        <BookingRule Code="APP_UK" CodeContext="ROOMTYPE" Start="{YEAR}-12-22" End="{YEAR}-12-31">
+          <LengthsOfStay>
+            <LengthOfStay Time="7" TimeUnit="Day" MinMaxMessageType="SetMinLOS"/>
+          </LengthsOfStay>
+          <DOW_Restrictions>
+            <ArrivalDaysOfWeek Mon="0" Tue="0" Weds="0" Thur="0" Fri="0" Sat="1" Sun="0"/>
+          </DOW_Restrictions>
+        </BookingRule>
+      </BookingRules>
+      <Rates>
+        <Rate InvTypeCode="APP_1" Start="{YEAR}-10-16" End="{YEAR}-12-21">
+          <BaseByGuestAmts>
+            <BaseByGuestAmt NumberOfGuests="4" AgeQualifyingCode="10" AmountAfterTax="204" Type="25"/>
+            <BaseByGuestAmt NumberOfGuests="5" AgeQualifyingCode="10" AmountAfterTax="272" Type="25"/>
+          </BaseByGuestAmts>
+          <AdditionalGuestAmounts>
+            <AdditionalGuestAmount AgeQualifyingCode="10" Amount="68"/>
+            <AdditionalGuestAmount AgeQualifyingCode="8" MaxAge="3" Amount="30"/>
+            <AdditionalGuestAmount AgeQualifyingCode="8" MinAge="3" MaxAge="7" Amount="25.5"/>
+            <AdditionalGuestAmount AgeQualifyingCode="8" MinAge="7" MaxAge="14" Amount="42.5"/>
+          </AdditionalGuestAmounts>
+          <MealsIncluded MealPlanCodes="14" MealPlanIndicator="1"/>
+        </Rate>
+        <Rate InvTypeCode="APP_1" Start="{YEAR}-12-22" End="{YEAR}-12-31">
+          <BaseByGuestAmts>
+            <BaseByGuestAmt NumberOfGuests="4" AgeQualifyingCode="10" AmountAfterTax="336" Type="25"/>
+            <BaseByGuestAmt NumberOfGuests="5" AgeQualifyingCode="10" AmountAfterTax="420" Type="25"/>
+          </BaseByGuestAmts>
+          <AdditionalGuestAmounts>
+            <AdditionalGuestAmount AgeQualifyingCode="10" Amount="84"/>
+            <AdditionalGuestAmount AgeQualifyingCode="8" MaxAge="3" Amount="30"/>
+            <AdditionalGuestAmount AgeQualifyingCode="8" MinAge="3" MaxAge="7" Amount="31.5"/>
+            <AdditionalGuestAmount AgeQualifyingCode="8" MinAge="7" MaxAge="14" Amount="52.5"/>
+          </AdditionalGuestAmounts>
+          <MealsIncluded MealPlanCodes="14" MealPlanIndicator="1"/>
+        </Rate>
+      </Rates>
+    </RatePlan>
+  </RatePlans>
+</OTA_HotelRatePlanNotifRQ>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Example for a Overlay message for a room based OTA_HotelAvailNotifRQ message.
+-->
+<OTA_HotelAvailNotifRQ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+                       xmlns="http://www.opentravel.org/OTA/2003/05"
+                       xsi:schemaLocation="http://www.opentravel.org/OTA/2003/05 OTA_HotelAvailNotifRQ.xsd"
+                       Version="1.002">
+    <AvailStatusMessages HotelCode="{HOTELCODE}"   >
+
+        <!-- EZ_1 101a -->
+        <AvailStatusMessage BookingLimit="0" BookingLimitMessageType="SetLimit">
+            <StatusApplicationControl Start="{YEAR}-08-05" End="{YEAR}-08-05" InvTypeCode="EZ_1" InvCode="101a" />
+        </AvailStatusMessage>
+        <AvailStatusMessage BookingLimit="1" BookingLimitMessageType="SetLimit">
+            <StatusApplicationControl Start="{YEAR}-08-08" End="{YEAR}-08-30" InvTypeCode="EZ_1" InvCode="101a" />
+        </AvailStatusMessage>
+
+        <!-- DZ_1 103 -->
+        <AvailStatusMessage BookingLimit="1" BookingLimitMessageType="SetLimit">
+            <StatusApplicationControl Start="{YEAR}-08-01" End="{YEAR}-08-23" InvTypeCode="DZ_1" InvCode="103" />
+        </AvailStatusMessage>
+
+        <!-- DZ_1 203 -->
+        <AvailStatusMessage BookingLimit="0" BookingLimitMessageType="SetLimit">
+            <StatusApplicationControl Start="{YEAR}-08-05" End="{YEAR}-08-23" InvTypeCode="DZ_1" InvCode="203" />
+        </AvailStatusMessage>        
+        <AvailStatusMessage BookingLimit="1" BookingLimitMessageType="SetLimit">
+            <StatusApplicationControl Start="{YEAR}-08-24" End="{YEAR}-09-30" InvTypeCode="DZ_1" InvCode="203" />
+        </AvailStatusMessage>
+
+    </AvailStatusMessages>
+
+</OTA_HotelAvailNotifRQ>
