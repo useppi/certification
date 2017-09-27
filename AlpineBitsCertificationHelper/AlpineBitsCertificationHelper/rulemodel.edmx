@@ -1,0 +1,112 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="alpinebitsModel.Store" Provider="System.Data.SQLite.EF6" ProviderManifestToken="data source=C:\C#\GenericAlpinebitsTestClient\AlpineBitsTestClient\alpinebits.sqlite3" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Rules2017">
+          <Key>
+            <PropertyRef Name="rule_id" />
+          </Key>
+          <Property Name="rule_id" Type="integer" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="rule_context" Type="nvarchar" MaxLength="2147483647" />
+          <Property Name="rule_target_applicateion" Type="nvarchar" MaxLength="2147483647" />
+          <Property Name="rule_chapter_number" Type="nvarchar" MaxLength="2147483647" />
+          <Property Name="rule_chapter_rule_number" Type="nvarchar" MaxLength="2147483647" />
+          <Property Name="rule_parent_rule_number" Type="nvarchar" MaxLength="2147483647" />
+          <Property Name="rule_chapter_desc" Type="nvarchar" MaxLength="2147483647" />
+          <Property Name="rule_page_number" Type="nvarchar" MaxLength="2147483647" />
+          <Property Name="rule_text" Type="nvarchar" MaxLength="2147483647" />
+          <Property Name="rule_type" Type="nvarchar" MaxLength="2147483647" />
+          <Property Name="rule_scope" Type="nvarchar" MaxLength="2147483647" />
+          <Property Name="call_action" Type="nvarchar" MaxLength="2147483647" />
+          <Property Name="call_param" Type="nvarchar" MaxLength="2147483647" />
+          <Property Name="audit_result_text" Type="nvarchar" MaxLength="2147483647" />
+          <Property Name="audit_result" Type="integer" />
+          <Property Name="audit_date" Type="nvarchar" MaxLength="2147483647" />
+        </EntityType>
+        <EntityContainer Name="alpinebitsModelStoreContainer">
+          <EntitySet Name="Rules2017" EntityType="Self.Rules2017" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="alpinebitsModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Rules2017">
+          <Key>
+            <PropertyRef Name="rule_id" />
+          </Key>
+          <Property Name="rule_id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="rule_context" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <Property Name="rule_target_applicateion" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <Property Name="rule_chapter_number" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <Property Name="rule_chapter_rule_number" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <Property Name="rule_parent_rule_number" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <Property Name="rule_chapter_desc" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <Property Name="rule_page_number" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <Property Name="rule_text" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <Property Name="rule_type" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <Property Name="rule_scope" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <Property Name="call_action" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <Property Name="call_param" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <Property Name="audit_result_text" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <Property Name="audit_result" Type="Int64" />
+          <Property Name="audit_date" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityContainer Name="alpinebitsEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Rules2017" EntityType="Self.Rules2017" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="alpinebitsModelStoreContainer" CdmEntityContainer="alpinebitsEntities">
+          <EntitySetMapping Name="Rules2017">
+            <EntityTypeMapping TypeName="alpinebitsModel.Rules2017">
+              <MappingFragment StoreEntitySet="Rules2017">
+                <ScalarProperty Name="rule_id" ColumnName="rule_id" />
+                <ScalarProperty Name="rule_context" ColumnName="rule_context" />
+                <ScalarProperty Name="rule_target_applicateion" ColumnName="rule_target_applicateion" />
+                <ScalarProperty Name="rule_chapter_number" ColumnName="rule_chapter_number" />
+                <ScalarProperty Name="rule_chapter_rule_number" ColumnName="rule_chapter_rule_number" />
+                <ScalarProperty Name="rule_parent_rule_number" ColumnName="rule_parent_rule_number" />
+                <ScalarProperty Name="rule_chapter_desc" ColumnName="rule_chapter_desc" />
+                <ScalarProperty Name="rule_page_number" ColumnName="rule_page_number" />
+                <ScalarProperty Name="rule_text" ColumnName="rule_text" />
+                <ScalarProperty Name="rule_type" ColumnName="rule_type" />
+                <ScalarProperty Name="rule_scope" ColumnName="rule_scope" />
+                <ScalarProperty Name="call_action" ColumnName="call_action" />
+                <ScalarProperty Name="call_param" ColumnName="call_param" />
+                <ScalarProperty Name="audit_result_text" ColumnName="audit_result_text" />
+                <ScalarProperty Name="audit_result" ColumnName="audit_result" />
+                <ScalarProperty Name="audit_date" ColumnName="audit_date" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="Kein" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
