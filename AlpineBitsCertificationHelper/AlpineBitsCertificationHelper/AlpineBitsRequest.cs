@@ -34,7 +34,7 @@ namespace AlpineBitsTestClient
     class AlpineBitsRequest
     {
         /// <summary>WriteMsgInForm
-        /// 
+        ///
         /// </summary>
         /// <param name="sMsg"></param>
         /// <param name="sAddMsg"></param>
@@ -62,7 +62,7 @@ namespace AlpineBitsTestClient
                 System.Diagnostics.Debug.WriteLine(k.Message.ToString());
             }
         }
-        public static AlpineBitsResponse ProcessRequest(AlpineBitsServer CallServer, string CallAction, string CallParam = "")
+        public static async Task<AlpineBitsResponse> ProcessRequest(AlpineBitsServer CallServer, string CallAction, string CallParam = "")
         {
             var StatusCode = "";
             var Response = new AlpineBitsResponse();
@@ -94,28 +94,28 @@ namespace AlpineBitsTestClient
                 client.DefaultRequestHeaders.Add("X-AlpineBits-ClientProtocolVersion", CallServer.X_AlpineBits_ProtocolVersion);
                 client.DefaultRequestHeaders.Add("X-AlpineBits-ClientID", CallServer.X_AlpineBits_ClientID);
                 if (CallServer.InvokeZipped)
-                    result = client.PostAsync(CallServer.ServerURL, new CompressedContent(content, "gzip")).Result;
+                    result = await client.PostAsync(CallServer.ServerURL, new CompressedContent(content, "gzip"));
                 else
                 {
                     //                    client.DefaultRequestHeaders.TransferEncoding.Add(new TransferCodingHeaderValue("chunked"));
                     //                    client.DefaultRequestHeaders.TransferEncoding.Add(new TransferCodingHeaderValue("gzip"));
-                    result = client.PostAsync(CallServer.ServerURL, content).Result;
+                    result = await client.PostAsync(CallServer.ServerURL, content);
                 }
                 headersResponse = result.Headers.ToString()+result.Content.Headers.ToString();
                 Response.Encoding = result.Content.Headers.ContentType.ToString();
 
                 headersRequest = client.DefaultRequestHeaders.ToString();
-                StatusCode = result.StatusCode.ToString("D") +" " + result.StatusCode.ToString(); 
+                StatusCode = result.StatusCode.ToString("D") +" " + result.StatusCode.ToString();
             }
             Response.StatusCode = StatusCode;
             Response.ResponseHeaders = headersResponse;
             if (result.StatusCode == HttpStatusCode.OK)
             {
-                Response.ResponseBody = result.Content.ReadAsStringAsync().Result;
+                Response.ResponseBody = await result.Content.ReadAsStringAsync();
             }
             else
             {
-                Response.ResponseBody = result.Content.ReadAsStringAsync().Result;
+                Response.ResponseBody = await result.Content.ReadAsStringAsync();
 //                Response.ResponseBody = @"Request failed. Status code: " + result.StatusCode + " " + result.StatusCode.ToString("D") + ". Message Content: " + result.Content.ReadAsStringAsync().Result;
             }
 

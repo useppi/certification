@@ -24,7 +24,7 @@ namespace AlpineBitsTestClient
     public partial class ruleForm : Form
     {
         public AlpineBitsServer myServer = new AlpineBitsServer();
-      
+
 
         private void setCredentials()
         {
@@ -114,21 +114,21 @@ namespace AlpineBitsTestClient
         }
 
 
-        private void button2_Click_1(object sender, EventArgs e)
+        private async void button2_Click_1(object sender, EventArgs e)
         {
             SaveServerParams();
 
             button2.Text = " loading...";
-            var Response = AlpineBitsRequest.ProcessRequest(myServer, call_actionTextBox.Text, call_paramTextBox.Text);
-            AlpineBitsRequest.LogXMLFile(call_paramTextBox.Text, rule_idTextBox.Text+ "_" + DateTime.Now.ToString("yyyy_MM_dd_HH_mm_ss") + "_"+ call_actionTextBox.Text+ "_RQ_");
+            var Response = await AlpineBitsRequest.ProcessRequest(myServer, call_actionTextBox.Text, call_paramTextBox.Text);
+            AlpineBitsRequest.LogXMLFile(call_paramTextBox.Text, rule_idTextBox.Text + "_" + DateTime.Now.ToString("yyyy_MM_dd_HH_mm_ss") + "_" + call_actionTextBox.Text + "_RQ_");
             string LogPath = AppDomain.CurrentDomain.BaseDirectory + @"\tmp\RQ.xml";
             File.WriteAllText(LogPath, call_paramTextBox.Text);
-            label16.Text = TestingMachine.Call(myServer.X_AlpineBits_ProtocolVersion, LogPath);
-          
+            label16.Text = await TestingMachine.Call(myServer.X_AlpineBits_ProtocolVersion, LogPath);
+
             AlpineBitsRequest.LogXMLFile(Response.ResponseBody, rule_idTextBox.Text + "_" + DateTime.Now.ToString("yyyy_MM_dd_HH_mm_ss") + "_" + call_actionTextBox.Text + "_RS_");
             LogPath = AppDomain.CurrentDomain.BaseDirectory + @"\tmp\RS.xml";
             File.WriteAllText(LogPath, Response.ResponseBody);
-            label17.Text = TestingMachine.Call(myServer.X_AlpineBits_ProtocolVersion, LogPath);
+            label17.Text = await TestingMachine.Call(myServer.X_AlpineBits_ProtocolVersion, LogPath);
             call_resultHeadersTextBox.Text = Response.ResponseHeaders;
             button2.Text = "Process request ...";
             label1.Text = Response.StatusCode.ToString();
@@ -137,14 +137,14 @@ namespace AlpineBitsTestClient
             call_resultTextBox.Text = Response.ResponseBody;
         }
 
-       
+
 
         private void label1_Click(object sender, EventArgs e)
         {
 
         }
 
-        
+
 
         private void call_actionTextBox_TextChanged(object sender, EventArgs e)
         {
@@ -290,7 +290,7 @@ namespace AlpineBitsTestClient
             audit_result_textTextBox.Text = "The tested application does not support this optional feature/capability.";
             comboBox1.Text = "OK";
             audit_result1ComboBox.SelectedIndex = comboBox1.SelectedIndex;
-           }
+        }
 
         private void rule_idTextBox_TextChanged(object sender, EventArgs e)
         {
@@ -361,7 +361,7 @@ namespace AlpineBitsTestClient
 
 
                 Paragraph oRange = oDoc.Content.Paragraphs.Add();
-                
+
                 string oTemp = "";
                 for (r = 0; r <= (int)RowCount - 1; r++)
                 {
@@ -396,8 +396,8 @@ namespace AlpineBitsTestClient
                 range.Text = "URL \t " + myServer.ServerURL + "\r";
                 range.Text += "HotelCode \t " + myServer.HotelCode + "\r";
                 range.Text += "X_AlpineBits_ClientID \t " + myServer.X_AlpineBits_ClientID + "\r";
-                range.Text += "X_AlpineBits_ProtocolVersion \t " + myServer.X_AlpineBits_ProtocolVersion+ "\r";
-                
+                range.Text += "X_AlpineBits_ProtocolVersion \t " + myServer.X_AlpineBits_ProtocolVersion + "\r";
+
                 // Capabilities
                 Paragraph assets = oDoc.Content.Paragraphs.Add();
                 assets.Range.ListFormat.ApplyBulletDefault();
@@ -427,7 +427,7 @@ namespace AlpineBitsTestClient
                     oDoc.Application.Selection.Tables[1].Cell(1, c + 1).Range.Text = DGV.Columns[c].ColumnName;
                 }
 
-                //table style 
+                //table style
                 //     oDoc.Application.Selection.Tables[1].set_Style("Grid Table 4 - Accent 5");
                 oDoc.Application.Selection.Tables[1].Rows[1].Select();
                 oDoc.Application.Selection.Cells.VerticalAlignment = Word.WdCellVerticalAlignment.wdCellAlignVerticalCenter;
@@ -454,10 +454,10 @@ namespace AlpineBitsTestClient
 
         }
 
-        private void tabPage3_Enter(object sender, EventArgs e)
+        private async void tabPage3_Enter(object sender, EventArgs e)
         {
-            var Response = AlpineBitsRequest.ProcessRequest(myServer, "getCapabilities", "");
-            var capabilities = Response.ResponseBody.Replace("OK:","").Split(',');
+            var Response = await AlpineBitsRequest.ProcessRequest(myServer, "getCapabilities", "");
+            var capabilities = Response.ResponseBody.Replace("OK:", "").Split(',');
             listBox1.Items.Clear();
 
             foreach (string item in capabilities)
@@ -465,7 +465,7 @@ namespace AlpineBitsTestClient
                 listBox1.Items.Add(item);
             }
 
-            Response = AlpineBitsRequest.ProcessRequest(myServer, "getVersion", "");
+            Response = await AlpineBitsRequest.ProcessRequest(myServer, "getVersion", "");
             txtServerAction.Text = Response.ResponseBody.Replace("OK:", "");
         }
 

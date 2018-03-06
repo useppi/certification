@@ -17,6 +17,6 @@ namespace AlpineBitsTestClient
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new ruleForm(new AlpineBitsServer() { }) { Text = "Server Certification Mode" });
-            }
+        }
     }
 }

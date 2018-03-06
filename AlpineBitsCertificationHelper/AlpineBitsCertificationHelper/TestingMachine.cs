@@ -20,12 +20,12 @@ namespace AlpineBitsTestClient
 
     class TestingMachine
     {
-       public static string Call(string Version, string filename)
+       public static async Task<string> Call(string Version, string filename)
        {
             JsonPost reqObject = new JsonPost();
             reqObject.version = Version;
             reqObject.msg = File.ReadAllText(filename);
-            return CallRestService("https://development.alpinebits.org/validator", JsonConvert.SerializeObject(reqObject));
+            return await CallRestService("https://development.alpinebits.org/validator", JsonConvert.SerializeObject(reqObject));
             /*var Response = new AlpineBitsResponse();
             var content = new MultipartFormDataContent(Guid.NewGuid().ToString());
             //Note: it's a best practice to use double-quotes, even when the name doesn't contain spaces:
@@ -47,23 +47,23 @@ namespace AlpineBitsTestClient
             return Result;*/
         }
 
-        private static dynamic CallRestService(string uri, string jsonstring, string method="POST")
+        private static async Task<dynamic> CallRestService(string uri, string jsonstring, string method="POST")
         {
             var httpWebRequest = (HttpWebRequest)WebRequest.Create(uri);
             httpWebRequest.ContentType = "application/json";
             httpWebRequest.Method = method;
 
-            using (var streamWriter = new StreamWriter(httpWebRequest.GetRequestStream()))
+            using (var streamWriter = new StreamWriter(await httpWebRequest.GetRequestStreamAsync()))
             {
                 streamWriter.Write(jsonstring);
                 streamWriter.Flush();
                 streamWriter.Close();
             }
             string result="";
-            var httpResponse = (HttpWebResponse)httpWebRequest.GetResponse();
+            var httpResponse = (HttpWebResponse)await httpWebRequest.GetResponseAsync();
             using (var streamReader = new StreamReader(httpResponse.GetResponseStream()))
             {
-                 result = streamReader.ReadToEnd();
+                 result = await streamReader.ReadToEndAsync();
             }
 
             return result;
