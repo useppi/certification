@@ -12,7 +12,7 @@ using System.Xml.Schema;
 
 namespace AlpineBitsTestClient
 {
-    class ABMethods
+    static class ABMethods
     {
         public static AlpineBitsServer GetServerCredentials()
         {
